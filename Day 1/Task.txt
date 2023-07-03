@@ -1,0 +1,5 @@
+Deteksi Palindrom: 
+Terdapat inputan sebuah teks, periksa apakah kata tersebut adalah palindrom atau tidak. Contohnya : teks “Katak” memiliki output = Palindrom
+Dikumpulkan dalam bentuk link google drive dan file disimpan dalam bentuk file .txt agar bisa di run di => play.kotlinlang.org
+Deadline pengumpulan tugas => 4 Juli 2023 06.00 WIB
+Link pengumpulan tugas => https://forms.gle/ub3v8jGQzvYq38719
