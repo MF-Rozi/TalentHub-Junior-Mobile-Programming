@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Junior-Mobile-Programmer-Task</string>
+    <string name="registrasi_txt">Registrasi</string>
+    <string name="text_name">Name</string>
+    <string name="text_jurusan">Jurusan</string>
+    <string name="text_semester">Semester</string>
+    <string name="text_login">Login</string>
+    <string name="text_register_illustration">Register Illustration</string>
+    <string name="text_email">Email</string>
 </resources>
