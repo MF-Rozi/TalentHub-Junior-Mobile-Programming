@@ -20,10 +20,10 @@ class DashboardActivity : AppCompatActivity() {
 
         val bundle  = this.intent.extras
         if (bundle != null){
-            name.text = bundle.getString("name")
-            email.text = bundle.getString("email")
-            jurusan.text = bundle.getString("jurusan")
-            semester.text = bundle.getString("semester")
+            name.text = "Name: "+ bundle.getString("name")
+            email.text = "Email: "+bundle.getString("email")
+            jurusan.text = "Jurusan: "+bundle.getString("jurusan")
+            semester.text = "Name: "+bundle.getString("semester")
         }
 
 

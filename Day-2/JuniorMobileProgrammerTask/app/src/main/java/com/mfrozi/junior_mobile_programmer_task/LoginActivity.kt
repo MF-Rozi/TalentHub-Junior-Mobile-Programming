@@ -30,31 +30,13 @@ class LoginActivity : AppCompatActivity() {
         jurusan = findViewById(R.id.text_input_jurusan)
         semester = findViewById(R.id.text_input_semester)
         login = findViewById(R.id.btn_login)
-        var nameText = ""
+
         var emailText = ""
         var jurusanText = ""
         var semesterText = 0
 
 
-        name.addTextChangedListener(object: TextWatcher{
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                nameText = ""
-            }
 
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                nameText += s
-            }
-
-            override fun afterTextChanged(s: Editable?) {
-                if (nameText != ""){
-                    nameValid = true
-                    Log.d(this.toString(), "afterTextChanged: Name Status: $nameValid")
-                    name.error = null
-                }
-                else name.error = "Nama Tidak Boleh Kosong"
-            }
-
-        })
         email.addTextChangedListener(object: TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
                 emailText = ""
@@ -117,10 +99,8 @@ class LoginActivity : AppCompatActivity() {
             }
 
         })
-        Log.d(this.toString(), "onCreate:Name Status:  $nameValid, Email Status: $emailValid, Jurusan Status: $jurusanValid, Semester Status: $semesterValid ")
 
             login.setOnClickListener { v ->
-                if (nameValid && emailValid && jurusanValid && semesterValid){
                 run {
                     val i = Intent(this, DashboardActivity::class.java)
                     var bundle = Bundle()
@@ -132,8 +112,29 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(i)
                     finish()
                 }
-                }else login.isEnabled = false
             }
 
+    }
+    fun nameCheck(){
+        var nameText = ""
+        name.addTextChangedListener(object: TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                nameText = ""
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                nameText += s
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                if (nameText != ""){
+                    nameValid = true
+                    Log.d(this.toString(), "afterTextChanged: Name Status: $nameValid")
+                    name.error = null
+                }
+                else name.error = "Nama Tidak Boleh Kosong"
+            }
+
+        })
     }
 }
