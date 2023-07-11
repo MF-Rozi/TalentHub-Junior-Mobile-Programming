@@ -1,4 +1,4 @@
-package com.mfrozi.juniormobileprogrammertask_3
+package com.mfrozi.juniormobileprogrammertask3
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.mfrozi.juniormobileprogrammertask_3", appContext.packageName)
+        assertEquals("com.mfrozi.juniormobileprogrammertask3", appContext.packageName)
     }
 }

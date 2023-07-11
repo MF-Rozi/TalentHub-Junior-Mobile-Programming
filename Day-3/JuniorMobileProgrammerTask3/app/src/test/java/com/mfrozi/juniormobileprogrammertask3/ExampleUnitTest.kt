@@ -1,4 +1,4 @@
-package com.mfrozi.juniormobileprogrammertask_3
+package com.mfrozi.juniormobileprogrammertask3
 
 import org.junit.Test
 
